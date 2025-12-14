@@ -47,32 +47,3 @@ end
 
 disp("Node with maximum edges: Node "+string(maxNode));
 disp("Maximum number of edges: "+string(maxEdges));
-
-StartingNode=4;
-EndingNode=5;
-[GetEdgeIndex]=NL_G_Nodes2Edge(TopologyGraph,StartingNode,EndingNode);
-disp('Index of Edge across nodes 4 and 5:',GetEdgeIndex);
-
-[EdgeLength]=NL_G_EdgesLength(TopologyGraph.node_x,TopologyGraph.node_y,TopologyGraph.head,TopologyGraph.tail);
-disp('length of all edges',EdgeLength);
-
-NodeIndex=2;
-[GetEdgeIndex]=NL_G_EdgesOfNode(TopologyGraph,NodeIndex);
-disp('Internal Edges of node 2:',GetEdgeIndex);
-
-[node_x,node_y,node_border,node_diameter,node_color,node_number]=NL_G_NodeDataFields(TopologyGraph);
-disp('Node x :',XCoordinatesOfNodes);
-disp('Node y :', YCoordinatesOfNodes);
-disp('Node Borders :', node_border);
-disp('Node Diameter :', node_diameter);
-disp('Node Colour :', node_color);
-disp('Node Number :', node_number);
-
-[e_head,e_tail,e_color,e_width,e_length,e_weight,e_number]=NL_G_EdgeDataFields(TopologyGraph)
-disp('Head Nodes',e_head);
-disp('Tail Nodes',e_tail);
-disp('Edge Colours',e_color);
-disp('Edge Widths',e_width);
-disp('Edge Lengths',e_length);
-disp('Edge Weights',e_weight);
-disp('Edge Numbers',e_number);
